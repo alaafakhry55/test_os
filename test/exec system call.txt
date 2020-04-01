@@ -1,0 +1,25 @@
+fars.c:
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+int main(int argc, char *argv[])
+{
+    printf("PID of fars.c = %d\n", getpid());
+    char *args[] = {"Hello", "C", "Programming", NULL};
+    execv("./mas", args);
+    printf("Back to fars.c");
+    return 0;
+}
+///////
+mas.c
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+int main(int argc, char *argv[])
+{
+    printf("We are in mas.c\n");
+    printf("PID of mas.c = %d\n", getpid());
+    return 0;
+}
+
+#
